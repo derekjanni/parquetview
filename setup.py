@@ -8,8 +8,6 @@ setup(
     scripts=['parquet-viewer/parquet-viewer'],
     install_requires=[
         "boto3==1.4.7",
-        "botocore==1.8.0",
-        "mock==2.0.0",
         "pandas==0.21.0",
         "pyarrow==0.8.0",
         "tabulate==0.8.2"

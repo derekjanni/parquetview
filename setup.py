@@ -1,11 +1,11 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='parquet-viewer',
+    name='parquetview',
     version='0.1',
     description='Read and edit parquet files from the command line.',
     packages=find_packages(),
-    scripts=['parquet-viewer/parquet-viewer'],
+    scripts=['parquetview/parquetview'],
     install_requires=[
         "boto3==1.4.7",
         "pandas==0.21.0",

@@ -1,3 +1,5 @@
+#!/usr/local/bin/python3.6
+
 import boto3
 import io
 import json

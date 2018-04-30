@@ -4,7 +4,7 @@ setup(
     name='parquetview',
     version='0.1',
     description='Read and edit parquet files from the command line.',
-    scripts=['bin/parquetview'],
+    scripts=['parquetview/parquetview'],
     install_requires=[
         "boto3==1.4.7",
         "pandas==0.21.0",

@@ -3,6 +3,4 @@
 *.DS_Store
 build/
 dist/
-parquet_viewer.egg-info/
-
-
+parquetview.egg-info/

@@ -5,6 +5,7 @@ setup(
     version='0.1',
     description='Read and edit parquet files from the command line.',
     scripts=['bin/parquetview'],
+    packages=find_packages(),
     install_requires=[
         "boto3==1.4.7",
         "pandas==0.21.0",

@@ -4,3 +4,4 @@
 build/
 dist/
 parquetview.egg-info/
+src/

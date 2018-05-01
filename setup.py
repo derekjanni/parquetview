@@ -2,9 +2,9 @@ from setuptools import setup, find_packages
 
 setup(
     name='parquetview',
-    version='0.1',
+    version='0.2',
     description='Read and edit parquet files from the command line.',
-    scripts=['bin/parquetview'],
+    scripts=['parquetview/parquetview'],
     packages=find_packages(),
     install_requires=[
         "boto3==1.4.7",

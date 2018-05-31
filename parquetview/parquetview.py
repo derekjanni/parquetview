@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3.6
+#!/usr/bin/env python3.6
 
 import boto3
 import io
@@ -34,6 +34,13 @@ if __name__ == '__main__':
             help='Path to local object from current directory'
         )
 
+    parser.add_argument('-p',
+            dest='print_parquet',
+            help='Print tabulate version of the given parquet file',
+            action='store_true',
+            default=False
+    )
+
     parser.add_argument('-c',
             dest='create_csv',
             help='Create CSV version of the given parquet file',
@@ -41,11 +48,25 @@ if __name__ == '__main__':
             default=False
         )
 
+    parser.add_argument('-i',
+            dest='inspect',
+            help='After conversion, allow interactive shell with PDB',
+            action='store_true',
+            default=False
+        )
+
+
     args = parser.parse_args()
 
     bucket, key = args.s3_path.split('/', 1)
     print(bucket, key)
     df = get_bundle(bucket=bucket, key=key)
-    print(tabulate(df, headers='keys', tablefmt='psql'))
+    
+    if args.print_parquet:
+        print(tabulate(df, headers='keys', tablefmt='psql'))
+
     if args.create_csv:
         df.to_csv('output.csv')
+
+    if args.inspect:
+        import pdb; pdb.set_trace()

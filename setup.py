@@ -9,7 +9,7 @@ setup(
     install_requires=[
         "boto3==1.4.7",
         "pandas==0.21.0",
-        "pyarrow==0.8.0",
+        "pyarrow==14.0.1",
         "tabulate==0.8.2"
     ]
 )
